@@ -1,11 +1,12 @@
 language: ruby
 rvm:
- - "2.2.1"
-# uncomment this line if your project needs to run something other than `rake`:
+ - 2.2.1
 addons:
 	postgresql: "9.3"
-
+env:
+  - DB=postgresql
 before_script:
-	- psql -c 'create database travis_ci_test;' -U postgres
-script: bundle exec rspec spec
+  - psql -c 'create database travis_ci_test' -U postgres
+script:
+  - RAILS_ENV=test bundle exec rake --trace db:migrate test
 sudo: required
