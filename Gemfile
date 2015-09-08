@@ -50,7 +50,8 @@ end
   gem 'launchy'
   gem 'email_spec'
   gem "capybara"
-  # gem 'capybara-webkit'
+  gem 'capybara-webkit'
+  gem 'headless'
 # end
 
 gem "pg"
