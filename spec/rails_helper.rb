@@ -6,8 +6,6 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 require 'capybara/rails'
-require 'headless'
-require 'selenium-webdriver'
 
 Capybara.default_driver = :selenium
 Capybara.javascript_driver = :webkit
