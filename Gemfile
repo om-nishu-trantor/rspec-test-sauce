@@ -41,7 +41,7 @@ group :development, :test do
   gem 'spring'
 end
 
-# group :test do 
+group :test do 
   gem "rspec"
   gem "rspec-rails"
   gem "factory_girl_rails"
@@ -51,7 +51,9 @@ end
   gem 'email_spec'
   gem "capybara"
   gem 'capybara-webkit'
-# end
+  gem "sauce"
+  gem "sauce-connect"
+end
 
 gem "pg"
 gem 'rails_12factor', group: :production
